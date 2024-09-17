@@ -1,0 +1,439 @@
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+html {
+	/* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+	font-family:
+		system-ui,
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+	line-height: 1.15; /* 1. Correct the line height in all browsers. */
+	-webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+	tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+}
+
+/*
+Sections
+========
+*/
+
+body {
+	margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+	font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+table {
+	border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+legend {
+	padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+	vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+	display: list-item;
+}
+
+/* START OF STYLING */
+
+.container {
+    display: grid;
+    grid-template-columns: 0.8fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    height: 100vh;
+}
+
+.header {
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    padding: 0 5%;
+    -webkit-box-shadow: 0px 3px 5px 0px #9F9F9F; 
+    box-shadow: 0px 3px 5px 0px #9F9F9F;
+    position: relative;
+    z-index: 10;
+}
+
+
+.nav1,
+.nav2 {
+    display: flex;
+}
+
+.nav1-left,
+.nav2-left {
+    display: flex;
+    flex-grow: 2;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2%;
+}
+
+
+.nav1-right,
+.nav2-right {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+.nav2-right {
+    justify-content: space-between;
+}
+
+.nav2-right > button {
+    width: 25%;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(6, 164, 238);
+    color: white;
+    padding: 2%;
+    font-weight: bold;
+}
+
+.nav1-right {
+    justify-content:right;
+    gap: 5%;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background-color: rgb(6, 164, 238);
+    color: white;
+    font-weight: bold;
+}
+
+.main,
+.right-sidebar {
+    background-color: rgb(233, 231, 231);
+    grid-row: 2 / 4;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2%;
+    padding: 3%;
+    padding-top: 50px;
+    overflow: scroll;
+    position: relative;
+}
+
+.main > div {
+    border-radius: 10px;
+    background-color: white;
+    padding: 5%;
+    border-left: 10px solid orange;
+    position: relative;
+    height: minmax(280px, 1fr);
+    -webkit-box-shadow: 3px 3px 5px 0px #9F9F9F; 
+    box-shadow: 3px 3px 5px 0px #9F9F9F;
+}
+
+
+.main > div > div {
+    position: absolute;
+    display: flex;
+    bottom: 10%;
+    right: 20%;
+    gap: 20%;
+}
+
+.main::before {
+    position: absolute;
+    content: "Your Projects";
+    font-weight: bold;
+    font-size: 1.5rem;
+    top: 2%;
+    left: 3%;
+}
+
+.right-sidebar {
+    font-size: 0.9rem;
+    grid-column: 3 / 4;
+    display: grid;
+    padding: 2%;
+    grid-template-rows: 1fr 1fr;
+    overflow: scroll;
+    align-content: start;
+    padding-right: 10%;
+    padding-left: 5%;
+}
+
+h4 {
+    margin: 2%;
+}
+
+.announcements {
+    margin-top: 20px;
+}
+
+
+.right-sidebar > div > div {
+    background-color: white;
+    border-radius: 5px;
+    padding: 2%;
+    height: minmax(500px, 1fr);
+}
+
+.nav1-left > input {
+    width: 70%;
+    min-width: 250px;
+}
+
+.nav1-left > input:focus {
+    border-color: rgb(6, 164, 238);
+    border-radius: 3px;
+    box-shadow: 0 0 5px 2px rgba(2, 79, 245, 0.2);
+    outline: none; 
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    padding: 5% 10%;
+}
+
+.sidebar > div {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+
+div > button > img {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+
+.main > div > div > button {
+    background-color: white;
+    border: none;
+}
+
+.main > div > div > button:hover {
+    cursor: pointer;
+}
+
+.trending > div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.trending > div > div {
+    display: flex;
+    flex-grow: 1;
+    justify-content: start;
+    align-items: center;
+    gap: 5%;
+    padding: 0 10%;
+}
+
+.sidebar > div > a {
+    text-decoration: none;
+    color: white;
+}
+
+.main > div > p {
+    color:  rgb(128, 127, 127);
+}
+
+.announcements > div > div > p,
+.trending > div > div > p {
+    color: rgb(128, 127, 127);
+}
+
+.announcements > div > div > p > strong,
+.trending > div > div > p > strong {
+    color: black;
+}
+
+.announcements > div,
+.trending > div {
+    -webkit-box-shadow: 3px 3px 5px 0px #9F9F9F; 
+    box-shadow: 3px 3px 5px 0px #9F9F9F;
+}
